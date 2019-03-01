@@ -14,20 +14,34 @@ options(width=120)
 
 # crux
 
+Identify the Crux of an Article
+
 ## Description
 
+Methods are provided to retrieve HTML content and return extracted
+metadata and summarised plain text. Further methods are provided to classify
+URLs with or without making network calls. Based on <https://github.com/chimbori/crux>.
+    
 ## What's Inside The Tin
 
 The following functions are implemented:
 
+- `classify_url`:	Classify a URL with or without making network calls
+- `is_ad_image`:	Classify a URL with or without making network calls
+- `is_likely_archive`:	Classify a URL with or without making network calls
+- `is_likely_article`:	Classify a URL with or without making network calls
+- `is_likely_audio`:	Classify a URL with or without making network calls
+- `is_likely_binary_doc`:	Classify a URL with or without making network calls
+- `is_likely_executable`:	Classify a URL with or without making network calls
+- `is_likely_image`:	Classify a URL with or without making network calls
+- `is_likely_video`:	Classify a URL with or without making network calls
+- `is_web_scheme`:	Classify a URL with or without making network calls
+- `summarise_url`:	Summarise the contents at a URL to essential bits
+
 ## Installation
 
 ```{r install-ex, eval=FALSE}
-devtools::install_git("https://sr.ht.com/~hrbrmstr/crux.git")
-# or
-devtools::install_git("https://gitlab.com/hrbrmstr/crux.git")
-# or (if you must)
-devtools::install_github("hrbrmstr/crux")
+install.packages(c("cruxjars", "crux"), repos = "https://cinc.rud.is/")
 ```
 
 ## Usage
@@ -38,6 +52,18 @@ library(crux)
 # current version
 packageVersion("crux")
 
+```
+
+```{r}
+str(
+  summarise_url("http://time.com/5541738/joe-biden-backtracks-pence-praise-criticism/"), 1
+)
+```
+
+```{r}
+str(
+  classify_url("https://www.washingtonpost.com/powerpost/house-democrats-explode-in-recriminations-as-liberals-lash-out-at-moderates/2019/02/28/c3d163fe-3b87-11e9-a06c-3ec8ed509d15_story.html")
+)
 ```
 
 ## crux Metrics

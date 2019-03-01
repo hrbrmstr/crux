@@ -1,25 +1,28 @@
 Package: crux
 Type: Package
-Title: crux title goes here otherwise CRAN checks fail
+Title: Identify the Crux of an Article
 Version: 0.1.0
 Date: 2019-03-01
 Authors@R: c(
     person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
-           comment = c(ORCID = "0000-0001-5670-2640"))
+           comment = c(ORCID = "0000-0001-5670-2640")),
+    person("Chimbori", role = "aut",
+           comment = "crux Java library (<https://github.com/chimbori/crux>)")
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A good description goes here otherwise CRAN checks fail.
+Description: Methods are provided to retrieve HTML content and return extracted
+    metadata and summarised plain text. Further methods are provided to classify
+    URLs with or without making network calls. Based on <https://github.com/chimbori/crux>.
 URL: https://gitlab.com/hrbrmstr/crux
 BugReports: https://gitlab.com/hrbrmstr/crux/issues
 Encoding: UTF-8
-License: AGPL
+License: Apache License 2.0 | file LICENSE
 Suggests:
     testthat,
     covr
 Depends:
-    R (>= 3.2.0)
-Imports:
-    httr,
-    jsonlite
+    R (>= 3.2.0),
+    cruxjars,
+    rJava
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1

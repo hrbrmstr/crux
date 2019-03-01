@@ -1,0 +1,52 @@
+---
+output: rmarkdown::github_document
+editor_options: 
+  chunk_output_type: inline
+---
+```{r pkg-knitr-opts, include=FALSE}
+knitr::opts_chunk$set(collapse=TRUE, fig.retina=2, message=FALSE, warning=FALSE)
+options(width=120)
+```
+
+[![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/crux.svg?branch=master)](https://travis-ci.org/hrbrmstr/crux) 
+[![Coverage Status](https://codecov.io/gh/hrbrmstr/crux/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/crux)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/crux)](https://cran.r-project.org/package=crux)
+
+# crux
+
+## Description
+
+## What's Inside The Tin
+
+The following functions are implemented:
+
+## Installation
+
+```{r install-ex, eval=FALSE}
+devtools::install_git("https://sr.ht.com/~hrbrmstr/crux.git")
+# or
+devtools::install_git("https://gitlab.com/hrbrmstr/crux.git")
+# or (if you must)
+devtools::install_github("hrbrmstr/crux")
+```
+
+## Usage
+
+```{r lib-ex}
+library(crux)
+
+# current version
+packageVersion("crux")
+
+```
+
+## crux Metrics
+
+```{r cloc, echo=FALSE}
+cloc::cloc_pkg_md()
+```
+
+## Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). 
+By participating in this project you agree to abide by its terms.
